@@ -1,0 +1,1429 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品追溯一物一码_一物一码溯源平台_产品追溯官方视频门户</title>
+<meta name="description" content="产品追溯一物一码官方网站，专注一物一码溯源技术与产品全生命周期追溯解决方案，以原创高清视频内容呈现企业溯源实践、行业观察与创作者社区生态，值得信赖的专业平台。">
+<meta name="keywords" content="产品追溯一物一码,一物一码,溯源平台,产品追溯,防伪溯源">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313304a'/%3E%3Crect x='14' y='14' width='10' height='10' fill='%2341d6a8'/%3E%3Crect x='27' y='14' width='10' height='10' fill='%23e9f4f1'/%3E%3Crect x='40' y='14' width='10' height='10' fill='%2341d6a8'/%3E%3Crect x='14' y='27' width='10' height='10' fill='%23e9f4f1'/%3E%3Crect x='27' y='27' width='10' height='10' fill='%2341d6a8'/%3E%3Crect x='14' y='40' width='10' height='10' fill='%2341d6a8'/%3E%3Crect x='40' y='40' width='10' height='10' fill='%23e9f4f1'/%3E%3C/svg%3E">
+<style>
+:root{
+  --trace-ink:#0d2233;
+  --trace-deep:#13304a;
+  --trace-mid:#1d4a6b;
+  --trace-mint:#41d6a8;
+  --trace-mint-soft:#d8f5ec;
+  --trace-paper:#f4f8f9;
+  --trace-card:#ffffff;
+  --trace-line:#dbe6ec;
+  --trace-muted:#5d7385;
+  --trace-amber:#f2b544;
+  --trace-radius:14px;
+  --trace-head-h:132px;
+  --trace-font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--trace-font);
+  color:var(--trace-ink);
+  background:var(--trace-paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+h1,h2,h3,h4{line-height:1.35;font-weight:700;}
+section{scroll-margin-top:calc(var(--trace-head-h) + 16px);}
+.trace-wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 22px;}
+.trace-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* 吸顶区 */
+.trace-sticky-stack{position:sticky;top:0;z-index:80;}
+.trace-announce{
+  background:linear-gradient(90deg,#0d2233,#173f5c 55%,#0d2233);
+  color:#dff3ec;font-size:13.5px;letter-spacing:.2px;
+  border-bottom:1px solid rgba(65,214,168,.25);
+}
+.trace-announce .trace-wrap{display:flex;align-items:center;gap:14px;min-height:38px;}
+.trace-announce-tag{
+  flex:none;background:var(--trace-mint);color:#08202f;font-weight:700;
+  font-size:11.5px;padding:2px 8px;border-radius:5px;letter-spacing:1px;
+}
+.trace-announce-text{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.trace-announce-text b{color:var(--trace-mint);font-weight:600;}
+.trace-announce-more{flex:none;color:#9fd8c7;font-size:12.5px;border-bottom:1px dashed rgba(159,216,199,.5);}
+.trace-announce-more:hover{color:var(--trace-mint);}
+
+.trace-header{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--trace-line);box-shadow:0 6px 22px -18px rgba(13,34,51,.6);}
+.trace-head-row{display:flex;align-items:center;gap:22px;min-height:72px;}
+.trace-brand{display:flex;align-items:center;gap:11px;flex:none;}
+.trace-brand-mark{width:40px;height:40px;flex:none;}
+.trace-brand-text strong{display:block;font-size:18px;letter-spacing:.4px;color:var(--trace-deep);}
+.trace-brand-text span{display:block;font-size:11px;letter-spacing:2.4px;color:var(--trace-muted);text-transform:uppercase;}
+.trace-nav{display:flex;align-items:center;gap:6px;margin-left:8px;flex:1 1 auto;flex-wrap:wrap;}
+.trace-nav a{
+  font-size:14.5px;color:#2c4557;padding:7px 11px;border-radius:8px;transition:.18s;
+  white-space:nowrap;
+}
+.trace-nav a:hover{background:var(--trace-mint-soft);color:var(--trace-deep);}
+.trace-head-tools{display:flex;align-items:center;gap:10px;flex:none;}
+.trace-search{
+  display:flex;align-items:center;gap:6px;background:var(--trace-paper);
+  border:1px solid var(--trace-line);border-radius:999px;padding:5px 6px 5px 13px;
+}
+.trace-search input{
+  width:148px;border:none;background:none;outline:none;font-size:13.5px;color:var(--trace-ink);font-family:inherit;
+}
+.trace-search input::placeholder{color:#8fa4b3;}
+.trace-search button{
+  width:28px;height:28px;border-radius:50%;background:var(--trace-deep);flex:none;
+  display:flex;align-items:center;justify-content:center;
+}
+.trace-search button:hover{background:var(--trace-mid);}
+.trace-search svg{width:14px;height:14px;stroke:#dff3ec;}
+.trace-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  border-radius:999px;font-size:14px;font-weight:600;padding:9px 20px;transition:.18s;
+  border:1px solid transparent;white-space:nowrap;
+}
+.trace-btn-primary{background:var(--trace-deep);color:#eafaf4;}
+.trace-btn-primary:hover{background:var(--trace-mid);transform:translateY(-1px);}
+.trace-btn-mint{background:var(--trace-mint);color:#08202f;}
+.trace-btn-mint:hover{filter:brightness(1.06);transform:translateY(-1px);}
+.trace-btn-ghost{border-color:#c5d7e2;color:var(--trace-deep);background:#fff;}
+.trace-btn-ghost:hover{border-color:var(--trace-mint);background:var(--trace-mint-soft);}
+.trace-nav-toggle{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--trace-line);align-items:center;justify-content:center;flex:none;background:#fff;}
+.trace-nav-toggle span{display:block;width:19px;height:2px;background:var(--trace-deep);position:relative;transition:.2s;}
+.trace-nav-toggle span::before,.trace-nav-toggle span::after{content:"";position:absolute;left:0;width:19px;height:2px;background:var(--trace-deep);transition:.2s;}
+.trace-nav-toggle span::before{top:-6px;}
+.trace-nav-toggle span::after{top:6px;}
+.trace-nav-toggle[aria-expanded="true"] span{background:transparent;}
+.trace-nav-toggle[aria-expanded="true"] span::before{top:0;transform:rotate(45deg);}
+.trace-nav-toggle[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg);}
+
+/* HERO */
+.trace-hero{border-bottom:1px solid var(--trace-line);background:linear-gradient(180deg,#eef6f6,#f7fbfb 70%,var(--trace-paper));overflow:hidden;}
+.trace-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;padding:56px 0 58px;align-items:center;}
+.trace-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;
+  letter-spacing:2px;color:var(--trace-mid);background:#fff;border:1px solid var(--trace-line);
+  border-radius:999px;padding:5px 14px;margin-bottom:20px;
+}
+.trace-eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--trace-mint);display:block;box-shadow:0 0 0 4px rgba(65,214,168,.18);}
+.trace-hero h1{
+  font-size:clamp(30px,4.1vw,52px);letter-spacing:-.5px;color:var(--trace-deep);
+  margin-bottom:18px;
+}
+.trace-hero h1 em{font-style:normal;color:var(--trace-mid);position:relative;}
+.trace-hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:4px;height:9px;
+  background:rgba(65,214,168,.32);z-index:-1;border-radius:2px;
+}
+.trace-hero-lead{font-size:16.5px;color:#3b566a;max-width:560px;margin-bottom:22px;}
+.trace-hero-brief{
+  font-size:14.5px;color:var(--trace-muted);border-left:3px solid var(--trace-mint);
+  padding:4px 0 4px 15px;margin-bottom:26px;max-width:600px;
+}
+.trace-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px;}
+.trace-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:600px;}
+.trace-stat{
+  background:#fff;border:1px solid var(--trace-line);border-radius:12px;padding:13px 14px;
+  box-shadow:0 10px 24px -22px rgba(13,34,51,.55);
+}
+.trace-stat b{display:block;font-size:23px;color:var(--trace-deep);letter-spacing:-.4px;line-height:1.2;}
+.trace-stat b small{font-size:12.5px;font-weight:600;color:var(--trace-mid);margin-left:2px;}
+.trace-stat span{display:block;font-size:12.5px;color:var(--trace-muted);margin-top:3px;}
+.trace-hero-visual{position:relative;}
+.trace-hero-visual svg{width:100%;height:auto;border-radius:18px;box-shadow:0 32px 60px -40px rgba(13,34,51,.8);}
+.trace-hero-float{
+  position:absolute;right:-6px;bottom:16px;background:#fff;border:1px solid var(--trace-line);
+  border-radius:12px;padding:10px 14px;box-shadow:0 18px 34px -24px rgba(13,34,51,.7);
+  font-size:12.5px;color:var(--trace-muted);display:flex;align-items:center;gap:9px;
+}
+.trace-hero-float i{width:9px;height:9px;border-radius:50%;background:var(--trace-mint);display:block;}
+
+/* 通用 section 头 */
+.trace-sec{padding:58px 0;}
+.trace-sec-alt{background:#fff;border-top:1px solid var(--trace-line);border-bottom:1px solid var(--trace-line);}
+.trace-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px;flex-wrap:wrap;}
+.trace-sec-head h2{font-size:clamp(22px,2.6vw,30px);color:var(--trace-deep);letter-spacing:-.3px;position:relative;padding-left:16px;}
+.trace-sec-head h2::before{
+  content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:5px;border-radius:3px;
+  background:linear-gradient(180deg,var(--trace-mint),var(--trace-mid));
+}
+.trace-sec-head p{font-size:14px;color:var(--trace-muted);max-width:520px;margin-top:8px;padding-left:16px;}
+.trace-sec-side{font-size:13px;color:var(--trace-muted);display:flex;align-items:center;gap:10px;}
+.trace-link{color:var(--trace-mid);font-weight:600;border-bottom:1px solid rgba(29,74,107,.3);padding-bottom:1px;}
+.trace-link:hover{color:var(--trace-mint);border-color:var(--trace-mint);}
+
+/* 焦点 + 列表 */
+.trace-focus-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start;}
+.trace-focus-card{background:#fff;border:1px solid var(--trace-line);border-radius:var(--trace-radius);overflow:hidden;box-shadow:0 22px 48px -42px rgba(13,34,51,.85);}
+.trace-focus-card figure{margin:0;position:relative;aspect-ratio:16/9;background:#e8f1f3;overflow:hidden;}
+.trace-focus-card figure svg{width:100%;height:100%;}
+.trace-badge{
+  position:absolute;left:14px;top:14px;background:rgba(13,34,51,.86);color:#dff3ec;
+  font-size:11.5px;letter-spacing:1px;padding:3px 9px;border-radius:5px;
+}
+.trace-focus-body{padding:20px 22px 22px;}
+.trace-focus-body h3{font-size:20px;color:var(--trace-deep);margin-bottom:8px;}
+.trace-focus-body p{font-size:14px;color:#42606f;margin-bottom:14px;}
+.trace-meta{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12.5px;color:var(--trace-muted);align-items:center;}
+.trace-tag{
+  display:inline-block;font-size:11.5px;color:var(--trace-mid);background:var(--trace-mint-soft);
+  border-radius:5px;padding:2px 8px;margin-right:5px;
+}
+.trace-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;}
+.trace-act{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:#3f5c6d;
+  border:1px solid var(--trace-line);border-radius:999px;padding:4px 12px;background:#fff;transition:.16s;
+}
+.trace-act:hover{border-color:var(--trace-mint);background:var(--trace-mint-soft);color:var(--trace-deep);}
+.trace-act.on{background:var(--trace-mint-soft);border-color:var(--trace-mint);color:#0b5c48;font-weight:600;}
+.trace-act svg{width:13px;height:13px;}
+
+.trace-vlist{display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--trace-line);border-radius:var(--trace-radius);overflow:hidden;}
+.trace-vlist-item{display:grid;grid-template-columns:36px 1fr;gap:14px;padding:15px 18px;border-bottom:1px solid #edf3f6;transition:.16s;}
+.trace-vlist-item:last-child{border-bottom:none;}
+.trace-vlist-item:hover{background:#f7fcfb;}
+.trace-vlist-num{font-size:14px;font-weight:700;color:#b4c6d1;letter-spacing:1px;padding-top:2px;}
+.trace-vlist-item h4{font-size:15px;color:var(--trace-deep);margin-bottom:4px;}
+.trace-vlist-item p{font-size:13px;color:#55707f;margin-bottom:6px;}
+.trace-vlist-foot{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--trace-muted);align-items:center;}
+
+/* 专题 */
+.trace-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.trace-topic{
+  background:#fff;border:1px solid var(--trace-line);border-radius:var(--trace-radius);padding:20px 20px 18px;
+  display:flex;flex-direction:column;transition:.2s;
+}
+.trace-topic:hover{transform:translateY(-3px);box-shadow:0 22px 44px -36px rgba(13,34,51,.75);border-color:#bcd8d5;}
+.trace-topic-cap{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;}
+.trace-topic h3{font-size:17px;color:var(--trace-deep);}
+.trace-status{font-size:11.5px;font-weight:600;color:#0b6b52;background:#dff6ee;border-radius:999px;padding:2px 9px;white-space:nowrap;}
+.trace-status.soon{color:#8a5a05;background:#fdf0d4;}
+.trace-topic p{font-size:13.5px;color:#4d6b7c;margin-bottom:12px;}
+.trace-topic ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
+.trace-topic li{font-size:13px;color:#35505f;padding-left:15px;position:relative;}
+.trace-topic li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:1px;background:var(--trace-mint);}
+.trace-topic-foot{margin-top:auto;font-size:12.5px;color:var(--trace-muted);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+
+/* 关键词深度解析 */
+.trace-deep-grid{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start;}
+.trace-article h3{font-size:18px;color:var(--trace-deep);margin:22px 0 9px;}
+.trace-article h3:first-child{margin-top:0;}
+.trace-article p{font-size:14.8px;color:#37515f;margin-bottom:12px;}
+.trace-article strong{color:var(--trace-deep);}
+.trace-aside{display:flex;flex-direction:column;gap:16px;}
+.trace-aside-card{background:#fff;border:1px solid var(--trace-line);border-radius:var(--trace-radius);padding:18px;}
+.trace-aside-card h4{font-size:14.5px;color:var(--trace-deep);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.trace-aside-card h4::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--trace-mint);display:block;}
+.trace-aside-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.trace-aside-card li{font-size:13px;color:#4d6b7c;display:flex;justify-content:space-between;gap:12px;}
+.trace-aside-card li b{color:var(--trace-deep);font-weight:600;}
+.trace-bar{height:6px;border-radius:4px;background:#e6eff2;overflow:hidden;margin-top:5px;}
+.trace-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--trace-mint),var(--trace-mid));border-radius:4px;}
+
+/* 创作者双列 */
+.trace-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.trace-author{
+  display:grid;grid-template-columns:58px 1fr;gap:15px;background:#fff;border:1px solid var(--trace-line);
+  border-radius:var(--trace-radius);padding:18px;transition:.2s;
+}
+.trace-author:hover{border-color:#bcd8d5;box-shadow:0 20px 40px -36px rgba(13,34,51,.8);}
+.trace-avatar{width:58px;height:58px;border-radius:50%;overflow:hidden;flex:none;position:relative;}
+.trace-avatar svg{width:100%;height:100%;}
+.trace-author h3{font-size:16px;color:var(--trace-deep);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.trace-author h3 span{font-size:11px;font-weight:600;color:#0b6b52;background:#dff6ee;border-radius:999px;padding:1px 8px;}
+.trace-author .trace-field{font-size:12.5px;color:var(--trace-mid);margin:3px 0 7px;}
+.trace-author p{font-size:13px;color:#4d6b7c;}
+.trace-author-nums{display:flex;gap:16px;font-size:12.5px;color:var(--trace-muted);margin-top:9px;flex-wrap:wrap;}
+.trace-author-nums b{color:var(--trace-deep);font-weight:700;}
+
+/* 榜单 */
+.trace-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.trace-rank{background:#fff;border:1px solid var(--trace-line);border-radius:var(--trace-radius);overflow:hidden;}
+.trace-rank h3{font-size:15.5px;color:#eafaf4;background:linear-gradient(100deg,var(--trace-deep),var(--trace-mid));padding:12px 17px;display:flex;justify-content:space-between;align-items:center;}
+.trace-rank h3 span{font-size:11.5px;font-weight:500;color:#a9d9cb;letter-spacing:.5px;}
+.trace-rank ol{list-style:none;padding:6px 0;}
+.trace-rank li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;padding:9px 17px;font-size:13.5px;border-bottom:1px solid #f0f5f7;}
+.trace-rank li:last-child{border-bottom:none;}
+.trace-rank .rk{font-weight:700;color:#b4c6d1;font-size:13px;}
+.trace-rank li:nth-child(-n+3) .rk{color:var(--trace-mid);}
+.trace-rank .val{font-size:12px;color:var(--trace-muted);white-space:nowrap;}
+
+/* 评论 */
+.trace-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.trace-comment{background:#fff;border:1px solid var(--trace-line);border-radius:12px;padding:16px 18px;position:relative;}
+.trace-comment::before{content:"“";position:absolute;right:16px;top:2px;font-size:44px;color:#e2eef1;font-family:Georgia,serif;line-height:1;}
+.trace-comment-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.trace-comment-head .trace-avatar{width:34px;height:34px;}
+.trace-comment-head b{font-size:13.5px;color:var(--trace-deep);display:block;}
+.trace-comment-head em{font-style:normal;font-size:11.5px;color:var(--trace-muted);}
+.trace-comment p{font-size:13.5px;color:#405b6a;position:relative;z-index:1;}
+.trace-comment .trace-tag{margin-top:9px;}
+
+/* 企业动态 */
+.trace-news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;background:#fff;border:1px solid var(--trace-line);border-radius:var(--trace-radius);overflow:hidden;}
+.trace-news-item{padding:18px 22px;border-bottom:1px solid #edf3f6;transition:.16s;}
+.trace-news-item:hover{background:#f7fcfb;}
+.trace-news-item:nth-child(odd){border-right:1px solid #edf3f6;}
+.trace-news-date{font-size:11.5px;color:var(--trace-mint);font-weight:700;letter-spacing:.6px;}
+.trace-news-item h4{font-size:14.5px;color:var(--trace-deep);margin:4px 0 5px;}
+.trace-news-item p{font-size:13px;color:#55707f;}
+
+/* 行动区 */
+.trace-cta{
+  background:linear-gradient(112deg,var(--trace-deep),#1c5070 60%,#17604f);color:#eafaf4;
+  border-radius:18px;padding:34px 36px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;
+}
+.trace-cta h2{font-size:24px;margin-bottom:8px;color:#fff;}
+.trace-cta p{font-size:14px;color:#b7d8d0;max-width:620px;}
+.trace-cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.trace-cta .trace-btn-ghost{background:transparent;border-color:rgba(234,250,244,.4);color:#eafaf4;}
+.trace-cta .trace-btn-ghost:hover{background:rgba(234,250,244,.12);border-color:var(--trace-mint);}
+
+/* FAQ */
+.trace-faq{display:flex;flex-direction:column;gap:10px;max-width:900px;}
+.trace-faq details{background:#fff;border:1px solid var(--trace-line);border-radius:10px;padding:0 18px;transition:.18s;}
+.trace-faq details[open]{border-color:#b8dcd4;background:#fbfefd;}
+.trace-faq summary{
+  list-style:none;cursor:pointer;padding:14px 30px 14px 0;font-size:14.5px;font-weight:600;
+  color:var(--trace-deep);position:relative;
+}
+.trace-faq summary::-webkit-details-marker{display:none;}
+.trace-faq summary::after{
+  content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);
+  font-size:19px;font-weight:400;color:var(--trace-mid);transition:.2s;
+}
+.trace-faq details[open] summary::after{content:"−";color:var(--trace-mint);}
+.trace-faq details p{font-size:13.5px;color:#4d6b7c;padding-bottom:15px;}
+
+/* 页脚 */
+.trace-footer{background:#0b1f2e;color:#a8c2cd;padding:46px 0 24px;margin-top:10px;}
+.trace-foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:30px;border-bottom:1px solid rgba(168,194,205,.16);}
+.trace-footer h4{color:#e6f7f1;font-size:14px;margin-bottom:12px;letter-spacing:.4px;}
+.trace-footer p{font-size:13px;color:#8aabb8;line-height:1.85;}
+.trace-footer ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.trace-footer li a{font-size:13px;color:#9fbfca;transition:.16s;}
+.trace-footer li a:hover{color:var(--trace-mint);}
+.trace-foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.trace-foot-brand strong{color:#eafaf4;font-size:16px;letter-spacing:.5px;}
+.trace-foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:18px;font-size:12.5px;color:#7b9aa8;}
+
+/* Toast & 弹窗 */
+.trace-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);z-index:200;
+  background:rgba(13,34,51,.94);color:#eafaf4;font-size:13.5px;padding:10px 20px;border-radius:999px;
+  opacity:0;pointer-events:none;transition:.26s;box-shadow:0 16px 34px -18px rgba(0,0,0,.7);
+  max-width:88vw;text-align:center;
+}
+.trace-toast.show{opacity:1;transform:translate(-50%,0);}
+.trace-modal{
+  position:fixed;inset:0;z-index:150;display:none;align-items:center;justify-content:center;
+  background:rgba(9,26,38,.55);backdrop-filter:blur(3px);padding:20px;
+}
+.trace-modal.open{display:flex;}
+.trace-modal-box{
+  background:#fff;border-radius:16px;max-width:520px;width:100%;padding:26px 26px 22px;position:relative;
+  box-shadow:0 34px 70px -30px rgba(0,0,0,.6);max-height:86vh;overflow:auto;
+}
+.trace-modal-box h3{font-size:19px;color:var(--trace-deep);margin-bottom:6px;}
+.trace-modal-box .trace-modal-sub{font-size:13px;color:var(--trace-muted);margin-bottom:16px;}
+.trace-modal-close{position:absolute;right:14px;top:12px;font-size:22px;color:#94a9b6;line-height:1;padding:4px;}
+.trace-modal-close:hover{color:var(--trace-deep);}
+.trace-field-row{display:flex;flex-direction:column;gap:5px;margin-bottom:13px;}
+.trace-field-row label{font-size:12.5px;font-weight:600;color:var(--trace-deep);}
+.trace-field-row input,.trace-field-row textarea{
+  font-family:inherit;font-size:13.5px;border:1px solid var(--trace-line);border-radius:9px;
+  padding:9px 12px;color:var(--trace-ink);outline:none;transition:.16s;background:#fbfdfd;
+}
+.trace-field-row input:focus,.trace-field-row textarea:focus{border-color:var(--trace-mint);background:#fff;}
+.trace-field-row textarea{resize:vertical;min-height:82px;}
+.trace-share-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:4px;}
+.trace-share-row button{
+  border:1px solid var(--trace-line);border-radius:10px;padding:11px;font-size:13.5px;
+  color:var(--trace-deep);background:#fbfdfd;transition:.16s;font-weight:600;
+}
+.trace-share-row button:hover{border-color:var(--trace-mint);background:var(--trace-mint-soft);}
+
+/* 回到顶部 */
+.trace-top{
+  position:fixed;right:22px;bottom:24px;z-index:90;width:44px;height:44px;border-radius:50%;
+  background:var(--trace-deep);color:#eafaf4;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 16px 30px -16px rgba(13,34,51,.9);opacity:0;pointer-events:none;transition:.24s;
+}
+.trace-top.show{opacity:1;pointer-events:auto;}
+.trace-top:hover{background:var(--trace-mid);}
+.trace-top svg{width:17px;height:17px;stroke:#eafaf4;}
+
+/* 响应式 */
+@media (max-width:1000px){
+  .trace-hero-grid{grid-template-columns:1fr;gap:34px;padding:42px 0 46px;}
+  .trace-deep-grid{grid-template-columns:1fr;}
+  .trace-topic-grid,.trace-rank-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .trace-focus-grid{grid-template-columns:1fr;}
+  .trace-search{display:none;}
+}
+@media (max-width:820px){
+  :root{--trace-head-h:auto;}
+  .trace-nav{
+    position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--trace-line);
+    flex-direction:column;align-items:stretch;padding:10px 18px 16px;gap:2px;display:none;
+    box-shadow:0 18px 30px -24px rgba(13,34,51,.6);
+  }
+  .trace-nav.open{display:flex;}
+  .trace-nav a{padding:11px 10px;border-radius:8px;}
+  .trace-head-row{position:relative;flex-wrap:wrap;min-height:64px;gap:10px;padding:8px 0;}
+  .trace-nav-toggle{display:flex;margin-left:auto;}
+  .trace-head-tools .trace-btn{display:none;}
+  .trace-author-grid,.trace-comment-grid,.trace-news{grid-template-columns:1fr;}
+  .trace-news-item:nth-child(odd){border-right:none;}
+  .trace-cta{grid-template-columns:1fr;padding:26px 22px;}
+  .trace-foot-grid{grid-template-columns:1fr 1fr;gap:26px;}
+  .trace-hero-stats{grid-template-columns:1fr;}
+  .trace-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media (max-width:600px){
+  .trace-topic-grid,.trace-rank-grid,.trace-hero-stats{grid-template-columns:1fr;}
+  .trace-hero-float{right:8px;bottom:8px;font-size:11.5px;padding:8px 11px;}
+  .trace-sec{padding:42px 0;}
+  .trace-announce-tag{display:none;}
+  .trace-foot-grid{grid-template-columns:1fr;}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="trace-sticky-stack">
+  <div class="trace-announce">
+    <div class="trace-wrap">
+      <span class="trace-announce-tag">官方发布</span>
+      <span class="trace-announce-text">
+        <b>新增</b>「一物一码全链路溯源」高清纪实专题上线，10 位创作者实拍从工厂到货架的全流程；同日发布 v3.8 码库管理更新日志。
+      </span>
+      <a class="trace-announce-more" href="#trace-updates">查看更新</a>
+    </div>
+  </div>
+
+  <header class="trace-header">
+    <div class="trace-wrap trace-head-row">
+      <a class="trace-brand" href="#trace-top" aria-label="产品追溯一物一码官方网站首页">
+        <svg class="trace-brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="traceBrandG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#13304a"/><stop offset="1" stop-color="#1d4a6b"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="15" fill="url(#traceBrandG)"/>
+          <rect x="13" y="13" width="9" height="9" fill="#41d6a8"/>
+          <rect x="26" y="13" width="9" height="9" fill="#e9f4f1"/>
+          <rect x="39" y="13" width="12" height="9" fill="#41d6a8"/>
+          <rect x="13" y="26" width="9" height="9" fill="#e9f4f1"/>
+          <rect x="26" y="26" width="9" height="9" fill="#41d6a8"/>
+          <rect x="13" y="39" width="12" height="9" fill="#41d6a8"/>
+          <rect x="39" y="39" width="12" height="9" fill="#e9f4f1"/>
+        </svg>
+        <span class="trace-brand-text">
+          <strong>一物一码溯源</strong>
+          <span>Trace Video Media</span>
+        </span>
+      </a>
+
+      <nav class="trace-nav" id="traceMainNav" aria-label="主导航">
+        <a href="#trace-focus">焦点内容</a>
+        <a href="#trace-topics">专题企划</a>
+        <a href="#trace-deep">深度解析</a>
+        <a href="#trace-authors">创作者矩阵</a>
+        <a href="#trace-rank">数据榜单</a>
+        <a href="#trace-voices">用户口碑</a>
+        <a href="#trace-updates">企业动态</a>
+        <a href="#trace-faq">帮助中心</a>
+      </nav>
+
+      <div class="trace-head-tools">
+        <form class="trace-search" id="traceSearchForm" role="search" onsubmit="return false;">
+          <label class="trace-sr" for="traceSearchInput">搜索溯源视频内容</label>
+          <input id="traceSearchInput" type="search" placeholder="搜码、溯源、防伪…" autocomplete="off">
+          <button type="button" id="traceSearchBtn" aria-label="执行搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round">
+              <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/>
+            </svg>
+          </button>
+        </form>
+        <button class="trace-btn trace-btn-primary" type="button" data-open-modal="submit">投稿报名</button>
+        <button class="trace-nav-toggle" id="traceNavToggle" aria-expanded="false" aria-controls="traceMainNav" aria-label="展开导航菜单">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="trace-top">
+
+  <!-- S2 首屏 -->
+  <section class="trace-hero" aria-labelledby="traceHeroTitle">
+    <div class="trace-wrap trace-hero-grid">
+      <div class="trace-hero-copy">
+        <span class="trace-eyebrow"><i></i>产品追溯一物一码 · 官方网站</span>
+        <h1 id="traceHeroTitle">产品追溯一物一码<br><em>让每一件产品都讲得清来路</em></h1>
+        <p class="trace-hero-lead">
+          我们是一物一码溯源领域的垂直品牌平台，用高清原创影像记录从生产线到消费者手中的真实链路，把复杂的追溯技术讲成看得懂的故事。
+        </p>
+        <p class="trace-hero-brief">
+          作为持续运营的产品追溯一物一码企业，平台专注于码制生成、包装赋码、流通采集与消费者查询的全链路内容生态，为品牌方、工厂与创作者搭建值得信赖的展示与交流窗口。
+        </p>
+        <div class="trace-hero-actions">
+          <a class="trace-btn trace-btn-mint" href="#trace-focus">观看焦点内容</a>
+          <a class="trace-btn trace-btn-ghost" href="#trace-topics">浏览专题企划</a>
+          <button class="trace-btn trace-btn-ghost" type="button" data-open-modal="contact">联系企业</button>
+        </div>
+        <div class="trace-hero-stats">
+          <div class="trace-stat">
+            <b>1268<small>期</small></b>
+            <span>溯源主题原创视频</span>
+          </div>
+          <div class="trace-stat">
+            <b>43<small>个</small></b>
+            <span>行业细分场景覆盖</span>
+          </div>
+          <div class="trace-stat">
+            <b>2.4<small>亿+</small></b>
+            <span>累计码标识赋码量</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="trace-hero-visual">
+        <svg viewBox="0 0 640 520" role="img" aria-label="一物一码溯源链路主视觉：产品包装二维码经工厂、仓储、门店抵达消费者手机查询页">
+          <defs>
+            <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#10344f"/><stop offset="1" stop-color="#16585a"/>
+            </linearGradient>
+            <linearGradient id="heroCard" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8f5f2"/>
+            </linearGradient>
+            <linearGradient id="heroLine" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#41d6a8"/><stop offset="1" stop-color="#7fe6c6"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="520" fill="url(#heroBg)"/>
+          <circle cx="520" cy="90" r="120" fill="#41d6a8" opacity=".13"/>
+          <circle cx="90" cy="430" r="140" fill="#7fe6c6" opacity=".1"/>
+          <path d="M70 360 C170 300, 250 380, 340 320 S480 250, 590 300" stroke="url(#heroLine)" stroke-width="3" fill="none" stroke-dasharray="9 8" opacity=".9"/>
+          <g>
+            <rect x="208" y="70" width="224" height="150" rx="14" fill="url(#heroCard)"/>
+            <rect x="228" y="90" width="34" height="34" fill="#13304a"/>
+            <rect x="266" y="90" width="34" height="34" fill="#41d6a8"/>
+            <rect x="228" y="128" width="34" height="34" fill="#41d6a8"/>
+            <rect x="266" y="128" width="20" height="34" fill="#13304a"/>
+            <rect x="316" y="94" width="94" height="9" rx="4" fill="#c7dde3"/>
+            <rect x="316" y="112" width="72" height="9" rx="4" fill="#dbe9ec"/>
+            <rect x="316" y="134" width="94" height="26" rx="7" fill="#dff6ee"/>
+            <rect x="326" y="143" width="60" height="8" rx="4" fill="#41d6a8"/>
+            <rect x="228" y="180" width="182" height="8" rx="4" fill="#dbe9ec"/>
+            <rect x="228" y="194" width="130" height="8" rx="4" fill="#e6eff2"/>
+          </g>
+          <g>
+            <rect x="70" y="250" width="150" height="96" rx="12" fill="#0c2b3f" stroke="#2f6f7a"/>
+            <rect x="86" y="268" width="56" height="56" rx="6" fill="#41d6a8" opacity=".85"/>
+            <rect x="154" y="270" width="50" height="8" rx="4" fill="#6f97a5"/>
+            <rect x="154" y="286" width="38" height="8" rx="4" fill="#4b7788"/>
+            <rect x="86" y="332" width="118" height="7" rx="3.5" fill="#2c5a6c"/>
+          </g>
+          <g>
+            <rect x="252" y="350" width="150" height="96" rx="12" fill="#0c2b3f" stroke="#2f6f7a"/>
+            <circle cx="327" cy="392" r="24" fill="none" stroke="#41d6a8" stroke-width="3"/>
+            <path d="M318 392 l7 7 l13 -14" stroke="#41d6a8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="282" y="428" width="90" height="7" rx="3.5" fill="#2c5a6c"/>
+          </g>
+          <g>
+            <rect x="438" y="220" width="140" height="220" rx="20" fill="#0a2436" stroke="#2f6f7a"/>
+            <rect x="452" y="238" width="112" height="158" rx="8" fill="#e9f6f3"/>
+            <rect x="464" y="252" width="88" height="12" rx="6" fill="#13304a"/>
+            <rect x="464" y="274" width="62" height="9" rx="4.5" fill="#9bb9c3"/>
+            <rect x="464" y="292" width="88" height="42" rx="6" fill="#c8ece2"/>
+            <rect x="474" y="303" width="34" height="7" rx="3.5" fill="#2c8a6f"/>
+            <rect x="474" y="316" width="58" height="7" rx="3.5" fill="#6fb7a3"/>
+            <rect x="464" y="346" width="88" height="9" rx="4.5" fill="#c7dbe2"/>
+            <rect x="464" y="364" width="52" height="9" rx="4.5" fill="#dbe9ec"/>
+            <circle cx="504" cy="414" r="8" fill="#41d6a8"/>
+          </g>
+          <g>
+            <rect x="30" y="380" width="120" height="12" rx="6" fill="#2b5d6f"/>
+            <rect x="30" y="402" width="86" height="12" rx="6" fill="#244f60"/>
+            <rect x="30" y="424" width="104" height="12" rx="6" fill="#1f4557"/>
+          </g>
+        </svg>
+        <div class="trace-hero-float"><i></i>本频道内容均为原创高清实拍</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 + 热门条目 -->
+  <section class="trace-sec" id="trace-focus" aria-labelledby="traceFocusTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceFocusTitle">焦点内容 · 产品追溯一物一码的一线观察</h2>
+          <p>一支主力纪实片搭配多条实测与拆解，把赋码工艺、仓库流转和消费者扫码体验讲透。</p>
+        </div>
+        <div class="trace-sec-side">更新于 2026-11-20 <a class="trace-link" href="#trace-topics">查看专题</a></div>
+      </div>
+
+      <div class="trace-focus-grid">
+        <article class="trace-focus-card">
+          <figure>
+            <svg viewBox="0 0 800 450" role="img" aria-label="焦点视频封面：灌装车间流水线上的瓶体赋码与在线检测画面">
+              <defs>
+                <linearGradient id="focusSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#13304a"/><stop offset="1" stop-color="#25607a"/>
+                </linearGradient>
+                <linearGradient id="focusBelt" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#1d4a6b"/><stop offset="1" stop-color="#2f7f92"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#focusSky)"/>
+              <rect y="300" width="800" height="150" fill="#0c2637"/>
+              <rect x="40" y="316" width="720" height="26" rx="8" fill="url(#focusBelt)"/>
+              <g fill="#e9f6f3">
+                <rect x="90" y="230" width="44" height="86" rx="10"/>
+                <rect x="170" y="230" width="44" height="86" rx="10"/>
+                <rect x="250" y="230" width="44" height="86" rx="10"/>
+                <rect x="450" y="230" width="44" height="86" rx="10"/>
+                <rect x="530" y="230" width="44" height="86" rx="10"/>
+              </g>
+              <g fill="#41d6a8">
+                <rect x="102" y="262" width="20" height="20" rx="3"/>
+                <rect x="182" y="262" width="20" height="20" rx="3"/>
+                <rect x="262" y="262" width="20" height="20" rx="3"/>
+                <rect x="462" y="262" width="20" height="20" rx="3"/>
+                <rect x="542" y="262" width="20" height="20" rx="3"/>
+              </g>
+              <g>
+                <rect x="330" y="140" width="150" height="150" rx="10" fill="#0f3548" stroke="#41d6a8" stroke-width="3"/>
+                <circle cx="405" cy="200" r="34" fill="none" stroke="#41d6a8" stroke-width="3"/>
+                <circle cx="405" cy="200" r="16" fill="#41d6a8" opacity=".6"/>
+                <rect x="352" y="252" width="106" height="9" rx="4.5" fill="#5f93a1"/>
+              </g>
+              <path d="M300 214 H330" stroke="#41d6a8" stroke-width="3" stroke-dasharray="6 5"/>
+              <path d="M480 214 H510" stroke="#41d6a8" stroke-width="3" stroke-dasharray="6 5"/>
+              <rect x="60" y="60" width="180" height="14" rx="7" fill="#2f7f92" opacity=".8"/>
+              <rect x="60" y="86" width="120" height="10" rx="5" fill="#2b6c80" opacity=".7"/>
+              <rect x="600" y="60" width="140" height="70" rx="10" fill="#0f3548" stroke="#2f7f92"/>
+              <rect x="616" y="76" width="60" height="9" rx="4.5" fill="#41d6a8"/>
+              <rect x="616" y="94" width="96" height="8" rx="4" fill="#5f93a1"/>
+              <rect x="616" y="110" width="78" height="8" rx="4" fill="#4b7788"/>
+            </svg>
+            <span class="trace-badge">焦点 · 深度实测</span>
+          </figure>
+          <div class="trace-focus-body">
+            <h3>一分钟赋码 1200 瓶：走进饮料工厂的一物一码产线</h3>
+            <p>我们跟拍华东一座日产能 80 万瓶的灌装工厂，记录喷码、视觉复核、箱码关联的完整节拍。片中还演示了断链场景下，产品追溯一物一码系统如何通过批次回滚把问题定位到单条产线。</p>
+            <div class="trace-meta">
+              <span>创作者：码上现场</span>
+              <span>时长 18:32</span>
+              <span>播放 42.6万</span>
+              <span>收藏 1.8万</span>
+            </div>
+            <div class="trace-meta" style="margin-top:8px;">
+              <span class="trace-tag">工厂实录</span><span class="trace-tag">赋码工艺</span><span class="trace-tag">批次回滚</span>
+            </div>
+            <div class="trace-actions">
+              <button class="trace-act" type="button" data-like="1" aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 22V10l5-8 1.6 1.1a3 3 0 0 1 1.2 2.7L14 10h5.4a2.4 2.4 0 0 1 2.3 3l-2.2 7.2A2.4 2.4 0 0 1 17.2 22H7Z"/><path d="M7 10H3v12h4"/></svg>
+                <span>点赞</span>
+              </button>
+              <button class="trace-act" type="button" data-collect aria-pressed="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5 4.8 13.3a4.6 4.6 0 0 1 6.5-6.5l.7.7.7-.7a4.6 4.6 0 0 1 6.5 6.5Z"/></svg>
+                <span>收藏</span>
+              </button>
+              <button class="trace-act" type="button" data-copy>复制链接</button>
+              <button class="trace-act" type="button" data-open-modal="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="trace-vlist" id="traceVideoList">
+          <article class="trace-vlist-item">
+            <div class="trace-vlist-num">01</div>
+            <div>
+              <h4>扫码 0.8 秒出结果：一次消费者查询体验的完整拆解</h4>
+              <p>从相机对焦、解析、接口响应到页面渲染，逐段计时，指出影响体验的三个隐藏瓶颈。</p>
+              <div class="trace-vlist-foot">
+                <span>作者：链路实验室</span><span>播放 18.4万</span><span>标签：查询体验</span>
+                <button class="trace-act" type="button" data-like aria-pressed="false">点赞</button>
+                <button class="trace-act" type="button" data-collect aria-pressed="false">收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="trace-vlist-item">
+            <div class="trace-vlist-num">02</div>
+            <div>
+              <h4>箱码与瓶码如何关联？三张图看懂层级码关系设计</h4>
+              <p>用白板推演的方式讲清母子码结构，给出适用于中小品牌的低成本实施方案。</p>
+              <div class="trace-vlist-foot">
+                <span>作者：白板溯源</span><span>播放 12.1万</span><span>标签：层级码</span>
+                <button class="trace-act" type="button" data-like aria-pressed="false">点赞</button>
+                <button class="trace-act" type="button" data-collect aria-pressed="false">收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="trace-vlist-item">
+            <div class="trace-vlist-num">03</div>
+            <div>
+              <h4>农产品溯源能做到多细？从一块茶园的地块档案说起</h4>
+              <p>跟随茶农记录采摘批次、加工时段与检测报告，观察产品追溯一物一码在农业端的落地边界。</p>
+              <div class="trace-vlist-foot">
+                <span>作者：山野记录员</span><span>播放 26.8万</span><span>标签：农产品</span>
+                <button class="trace-act" type="button" data-like aria-pressed="false">点赞</button>
+                <button class="trace-act" type="button" data-collect aria-pressed="false">收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="trace-vlist-item">
+            <div class="trace-vlist-num">04</div>
+            <div>
+              <h4>防伪标签的五种常见做法，以及各自的失效场景</h4>
+              <p>对比刮刮码、全息贴、激光刻蚀、易碎纸与隐形油墨，给出不同单价区间的选择建议。</p>
+              <div class="trace-vlist-foot">
+                <span>作者：包装老张</span><span>播放 9.7万</span><span>标签：防伪标签</span>
+                <button class="trace-act" type="button" data-like aria-pressed="false">点赞</button>
+                <button class="trace-act" type="button" data-collect aria-pressed="false">收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="trace-vlist-item">
+            <div class="trace-vlist-num">05</div>
+            <div>
+              <h4>经销商串货治理实录：三个月把流向数据跑通了</h4>
+              <p>从门店采集设备部署到异常流向预警，复盘一次真实的渠道治理项目。</p>
+              <div class="trace-vlist-foot">
+                <span>作者：渠道观察者</span><span>播放 7.3万</span><span>标签：渠道治理</span>
+                <button class="trace-act" type="button" data-like aria-pressed="false">点赞</button>
+                <button class="trace-act" type="button" data-collect aria-pressed="false">收藏</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="trace-sec trace-sec-alt" id="trace-topics" aria-labelledby="traceTopicsTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceTopicsTitle">专题企划 · 产品追溯一物一码的多行业实践</h2>
+          <p>三个长期更新的内容企划，把同一套溯源逻辑放进不同产业链里检验。</p>
+        </div>
+        <div class="trace-sec-side">共 3 个进行中企划</div>
+      </div>
+
+      <div class="trace-topic-grid">
+        <article class="trace-topic">
+          <div class="trace-topic-cap">
+            <h3>食品从田间到餐桌</h3>
+            <span class="trace-status">更新中</span>
+          </div>
+          <p>聚焦生鲜、乳品与调味品，用跟拍与检测数据呈现真实的产品追溯一物一码落地过程。</p>
+          <ul>
+            <li>第 12 集：冷链断点的 40 分钟</li>
+            <li>第 13 集：一罐蜂蜜的六个码</li>
+            <li>第 14 集：临期品流向追踪实验</li>
+          </ul>
+          <div class="trace-topic-foot"><span>已更新 14 集</span><span>联合制作：山野记录员</span></div>
+        </article>
+
+        <article class="trace-topic">
+          <div class="trace-topic-cap">
+            <h3>工厂赋码现场</h3>
+            <span class="trace-status">更新中</span>
+          </div>
+          <p>走进包装车间，观察不同产线速度下的赋码稳定性与在线质检方案差异。</p>
+          <ul>
+            <li>第 07 集：高速线为什么怕抖动</li>
+            <li>第 08 集：视觉复核的三次误判</li>
+            <li>第 09 集：换线切换的 6 分钟</li>
+          </ul>
+          <div class="trace-topic-foot"><span>已更新 9 集</span><span>联合制作：码上现场</span></div>
+        </article>
+
+        <article class="trace-topic">
+          <div class="trace-topic-cap">
+            <h3>消费者查询体验</h3>
+            <span class="trace-status soon">即将上线</span>
+          </div>
+          <p>从真实用户视角出发，记录扫码那一秒背后的期待、疑惑与信任建立过程。</p>
+          <ul>
+            <li>第 01 集：扫不出来的时候</li>
+            <li>第 02 集：老人与年轻人的扫码差异</li>
+            <li>第 03 集：重复查询的提示设计</li>
+          </ul>
+          <div class="trace-topic-foot"><span>预计 12 月上线</span><span>预约人数 3,412</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词深度解析 -->
+  <section class="trace-sec" id="trace-deep" aria-labelledby="traceDeepTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceDeepTitle">深度解析 · 读懂产品追溯一物一码</h2>
+          <p>把行业里最容易被含糊带过的部分拆开讲：码从哪来、数据怎么走、价值落在哪。</p>
+        </div>
+        <div class="trace-sec-side">约 1200 字 · 阅读 9 分钟</div>
+      </div>
+
+      <div class="trace-deep-grid">
+        <div class="trace-article">
+          <h3>一物一码到底是什么，和普通二维码有什么区别</h3>
+          <p>很多人第一次听到<strong>产品追溯一物一码</strong>，会把它理解成「在包装上印个二维码」。这两件事的差别，相当于「给每户人家编个门牌号」和「给全国每个人发一张唯一身份证」。普通二维码通常是同一个链接被千万件商品共用，扫出来的页面完全一致；而一物一码强调每个最小销售单元拥有一个唯一标识，码与码之间不可互换、不可批量猜测。正因为唯一，企业才能把生产批次、产线、班次、仓储位置、经销区域、售出时间这些信息逐层挂到同一个码上。</p>
+          <p>在我们拍摄的工厂纪实里，这一点体现得非常直接：喷码设备每秒钟生成一批新码，视觉系统在旁边逐瓶复核，只要有一个码的清晰度低于阈值，那一瓶就会被剔除。整个环节里，码不是装饰，而是产品的数字孪生入口。企业官网中常说的「全链路可查」，前提正是这一枚枚互不重复的码。</p>
+
+          <h3>码从生成到废弃，一条完整的生命周期</h3>
+          <p>一个码的生命周期大致分为五段：生成、赋码、采集、查询、归档。生成阶段由码库系统按加密规则批量产出，通常一次生成一个批次，并设定有效期与使用上限；赋码阶段把码以喷印、标签或激光方式落到实物上，同时建立「码—产品—批次」的对应关系；采集阶段发生在装箱、出库、入库、门店上架等节点，扫码枪与手持终端把流向数据回传；查询阶段由消费者扫码触发，系统返回真伪结论与产品档案；归档阶段则在产品退市或查询周期结束后执行，数据仍保留但不再对外展示。</p>
+          <p>这套流程听起来顺畅，实际执行中最容易出问题的是第二段和第三段之间的衔接。<strong>产品追溯一物一码</strong>项目做失败，多数不是码生成不出来，而是产线节拍一变、采集设备一老化，数据就断了。我们在专题片里专门拍过一次断链：一条线连续两天漏采，仓库账面数字与实物差了 300 多箱。后来靠批次回滚和人工盘点才对齐。这也解释了为什么行业里反复强调「采集率」而不是「赋码率」——印上去容易，采回来才难。</p>
+
+          <h3>为什么品牌方愿意为溯源投入，价值落在哪三层</h3>
+          <p>第一层是防伪与打假。唯一码配合查询次数限制与异地预警，能明显提高仿冒成本。当同一枚码在不同省份被反复查询时，系统会自动标记异常，品牌方可以据此发起核查。第二层是渠道治理。经销商串货长期困扰快消行业，有了流向数据后，哪批货越界销售一目了然，处理依据从口头争议变成数据记录。第三层是消费者信任与复购。扫码后看到的产地、检测报告、加工时间，构成了看得见的品质凭证，这种透明本身就是一种口碑资产。</p>
+          <p>还有一层常被忽略的价值：产品追溯一物一码让企业第一次拥有了「单品级」的反馈通道。哪个区域扫码率高、哪批产品查询集中、哪些用户愿意留下评价，这些数据反哺到选品与营销里，比传统抽样调研更细。我们采访的一家调味品企业就提到，他们把扫码页面的评价内容整理成月度报告，直接用于新品口味调整，这已经超出了防伪的原始诉求。</p>
+
+          <h3>中小品牌怎么起步，三条务实的路径</h3>
+          <p>不是所有企业都需要一次性上全套系统。第一条路径是「先防伪、后流向」：只在核心单品上做唯一码，先解决假货与查询体验，等产线稳定再逐步加采集点。第二条路径是「借力包装厂」：把赋码与初检交给包装供应商完成，品牌方只负责入库采集，投入更轻。第三条路径是「单品类试点」：选一个高毛利、高仿冒风险的单品跑通闭环，再复制到其他品类。</p>
+          <p>无论哪条路径，都要先想清楚一件事：<strong>产品追溯一物一码</strong>最终服务的是消费者查询那几秒钟的体验。如果扫码后页面卡顿、信息含糊、找不到关键结论，前面的技术投入都会打折。我们在多个项目复盘中看到，把查询页做简洁、把结论放前面、把检测报告做成可下载的图片，往往比增加更多字段更能提升满意度。这也是本平台持续用视频记录真实项目的原因——技术参数可以复制，落地经验很难。</p>
+        </div>
+
+        <aside class="trace-aside" aria-label="溯源要点速览">
+          <div class="trace-aside-card">
+            <h4>链路关键指标</h4>
+            <ul>
+              <li><span>赋码覆盖率</span><b>99.2%</b></li>
+              <li><span>采集成功率</span><b>97.6%</b></li>
+              <li><span>查询响应</span><b>0.8s</b></li>
+            </ul>
+            <div class="trace-bar" aria-hidden="true"><i style="width:94%"></i></div>
+            <p style="font-size:12px;color:var(--trace-muted);margin-top:8px;">数据来自平台 2026 年第三季度合作项目抽样。</p>
+          </div>
+          <div class="trace-aside-card">
+            <h4>常见误区</h4>
+            <ul>
+              <li><span>只印码不采集</span></li>
+              <li><span>查询页信息堆砌</span></li>
+              <li><span>忽视断链回滚设计</span></li>
+              <li><span>把溯源当一次性项目</span></li>
+            </ul>
+          </div>
+          <div class="trace-aside-card">
+            <h4>延伸观看</h4>
+            <ul>
+              <li><a class="trace-link" href="#trace-focus">工厂赋码现场实录</a></li>
+              <li><a class="trace-link" href="#trace-topics">食品从田间到餐桌</a></li>
+              <li><a class="trace-link" href="#trace-rank">溯源内容热度榜</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="trace-sec trace-sec-alt" id="trace-authors" aria-labelledby="traceAuthorsTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceAuthorsTitle">创作者矩阵 · 产品追溯一物一码的记录者</h2>
+          <p>四位长期深耕溯源领域的创作者，用镜头把技术细节变成可理解的现场。</p>
+        </div>
+        <div class="trace-sec-side"><button class="trace-btn trace-btn-ghost" type="button" data-open-modal="submit">申请入驻</button></div>
+      </div>
+
+      <div class="trace-author-grid">
+        <article class="trace-author">
+          <div class="trace-avatar">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者码上现场的插画头像：深色底上的绿色镜头图形">
+              <rect width="64" height="64" fill="#13304a"/>
+              <circle cx="32" cy="30" r="13" fill="none" stroke="#41d6a8" stroke-width="3"/>
+              <circle cx="32" cy="30" r="5" fill="#41d6a8"/>
+              <rect x="20" y="48" width="24" height="4" rx="2" fill="#4b7788"/>
+            </svg>
+          </div>
+          <div>
+            <h3>码上现场 <span>认证创作者</span></h3>
+            <div class="trace-field">擅长：工厂实拍 · 赋码工艺</div>
+            <p>十年工业纪录片拍摄经验，擅长在嘈杂车间里捕捉关键动作。坚持每支片子至少跑两次现场，用数据核对画面，不美化也不回避产线上的真实问题。</p>
+            <div class="trace-author-nums"><span>作品 <b>86</b></span><span>粉丝 <b>24.1万</b></span></div>
+          </div>
+        </article>
+
+        <article class="trace-author">
+          <div class="trace-avatar">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者白板溯源的插画头像：浅绿底上的白色方块与线条">
+              <rect width="64" height="64" fill="#d8f5ec"/>
+              <rect x="15" y="17" width="16" height="16" fill="#13304a"/>
+              <rect x="33" y="17" width="16" height="16" fill="#41d6a8"/>
+              <rect x="15" y="35" width="16" height="16" fill="#41d6a8"/>
+              <rect x="33" y="35" width="16" height="16" fill="#13304a"/>
+            </svg>
+          </div>
+          <div>
+            <h3>白板溯源 <span>技术顾问</span></h3>
+            <div class="trace-field">擅长：码结构 · 方案讲解</div>
+            <p>系统架构师出身，擅长把层级码、加密规则这些抽象概念画成图。视频节奏克制，偏爱用一块白板从头讲到尾，被观众称为「能听懂的溯源课」。</p>
+            <div class="trace-author-nums"><span>作品 <b>54</b></span><span>粉丝 <b>17.6万</b></span></div>
+          </div>
+        </article>
+
+        <article class="trace-author">
+          <div class="trace-avatar">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者山野记录员的插画头像：大地色底上的山形与太阳">
+              <rect width="64" height="64" fill="#e8e0cf"/>
+              <path d="M8 50 L24 26 L36 42 L46 30 L58 50 Z" fill="#4d7a5f"/>
+              <circle cx="46" cy="20" r="7" fill="#f2b544"/>
+            </svg>
+          </div>
+          <div>
+            <h3>山野记录员 <span>田野作者</span></h3>
+            <div class="trace-field">擅长：农产品 · 在地文化</div>
+            <p>常年在茶山与果园之间奔走，镜头里多是泥路和清晨的雾。关注小农户如何用轻量化的溯源方式获得议价能力，作品有很强的在地气息与耐心。</p>
+            <div class="trace-author-nums"><span>作品 <b>112</b></span><span>粉丝 <b>31.5万</b></span></div>
+          </div>
+        </article>
+
+        <article class="trace-author">
+          <div class="trace-avatar">
+            <svg viewBox="0 0 64 64" role="img" aria-label="创作者渠道观察者的插画头像：蓝灰底上的折线上升图">
+              <rect width="64" height="64" fill="#2f4b60"/>
+              <polyline points="12,46 24,34 34,40 44,24 54,28" fill="none" stroke="#41d6a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="54" cy="28" r="4" fill="#f2b544"/>
+            </svg>
+          </div>
+          <div>
+            <h3>渠道观察者 <span>行业作者</span></h3>
+            <div class="trace-field">擅长：渠道治理 · 数据分析</div>
+            <p>曾负责快消品牌区域运营，对串货、临期与库存周转有切身体会。擅长把流向数据讲成可复用的管理方法，视频信息密度高，常附可下载的表格模板。</p>
+            <div class="trace-author-nums"><span>作品 <b>68</b></span><span>粉丝 <b>13.2万</b></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 数据榜单 -->
+  <section class="trace-sec" id="trace-rank" aria-labelledby="traceRankTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceRankTitle">数据榜单 · 产品追溯一物一码内容表现</h2>
+          <p>基于平台近 30 天的播放、收藏与完播数据生成，每周一更新。</p>
+        </div>
+        <div class="trace-sec-side">统计周期 2026-10-23 至 2026-11-21</div>
+      </div>
+
+      <div class="trace-rank-grid">
+        <div class="trace-rank">
+          <h3>热度榜 <span>播放</span></h3>
+          <ol>
+            <li><span class="rk">1</span><span>一分钟赋码 1200 瓶</span><span class="val">42.6万</span></li>
+            <li><span class="rk">2</span><span>从一块茶园的地块档案说起</span><span class="val">26.8万</span></li>
+            <li><span class="rk">3</span><span>扫码 0.8 秒出结果</span><span class="val">18.4万</span></li>
+            <li><span class="rk">4</span><span>箱码与瓶码如何关联</span><span class="val">12.1万</span></li>
+            <li><span class="rk">5</span><span>防伪标签的五个做法</span><span class="val">9.7万</span></li>
+          </ol>
+        </div>
+        <div class="trace-rank">
+          <h3>新人榜 <span>近 30 天</span></h3>
+          <ol>
+            <li><span class="rk">1</span><span>冷库口的扫码枪</span><span class="val">3.6万</span></li>
+            <li><span class="rk">2</span><span>一件校服的追溯码</span><span class="val">2.9万</span></li>
+            <li><span class="rk">3</span><span>药店核销现场记录</span><span class="val">2.4万</span></li>
+            <li><span class="rk">4</span><span>母婴用品的批次查询</span><span class="val">1.8万</span></li>
+            <li><span class="rk">5</span><span>小作坊的第一枚码</span><span class="val">1.2万</span></li>
+          </ol>
+        </div>
+        <div class="trace-rank">
+          <h3>口碑榜 <span>收藏率</span></h3>
+          <ol>
+            <li><span class="rk">1</span><span>白板讲清层级码</span><span class="val">8.4%</span></li>
+            <li><span class="rk">2</span><span>断链之后的三天</span><span class="val">7.9%</span></li>
+            <li><span class="rk">3</span><span>查询页设计对照</span><span class="val">7.1%</span></li>
+            <li><span class="rk">4</span><span>渠道治理三个月复盘</span><span class="val">6.5%</span></li>
+            <li><span class="rk">5</span><span>小品牌起步三条路</span><span class="val">5.8%</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 用户评价 -->
+  <section class="trace-sec trace-sec-alt" id="trace-voices" aria-labelledby="traceVoicesTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceVoicesTitle">用户口碑 · 他们眼中的产品追溯一物一码</h2>
+          <p>来自品牌方、工厂管理者与普通观众的真实留言，未作删改。</p>
+        </div>
+        <div class="trace-sec-side">共 236 条评价 · 精选 6 条</div>
+      </div>
+
+      <div class="trace-comment-grid">
+        <article class="trace-comment">
+          <div class="trace-comment-head">
+            <div class="trace-avatar">
+              <svg viewBox="0 0 64 64" role="img" aria-label="用户林工的圆形首字头像">
+                <rect width="64" height="64" fill="#1d4a6b"/><text x="32" y="42" font-size="26" text-anchor="middle" fill="#eafaf4" font-family="sans-serif">林</text>
+              </svg>
+            </div>
+            <div><b>林工 · 包装厂生产主管</b><em>2026-11-18</em></div>
+          </div>
+          <p>第 12 集讲的抖动问题我们线上一模一样，看完当晚就把传送带张紧轮换了，第二天的剔除率从 3.1% 降到 0.9%。这种能直接照着改的视频太少了。</p>
+          <span class="trace-tag">工厂实操</span>
+        </article>
+
+        <article class="trace-comment">
+          <div class="trace-comment-head">
+            <div class="trace-avatar">
+              <svg viewBox="0 0 64 64" role="img" aria-label="用户苏禾的圆形首字头像">
+                <rect width="64" height="64" fill="#2c8a6f"/><text x="32" y="42" font-size="26" text-anchor="middle" fill="#eafaf4" font-family="sans-serif">苏</text>
+              </svg>
+            </div>
+            <div><b>苏禾 · 农产品品牌主理人</b><em>2026-11-12</em></div>
+          </div>
+          <p>我们规模小，一开始觉得一物一码离自己很远。看完山野记录员那期茶园，才知道可以从单一批次先做。现在扫码页放了检测报告，客户复购率提升得比预期明显。</p>
+          <span class="trace-tag">小品牌实践</span>
+        </article>
+
+        <article class="trace-comment">
+          <div class="trace-comment-head">
+            <div class="trace-avatar">
+              <svg viewBox="0 0 64 64" role="img" aria-label="用户陈默的圆形首字头像">
+                <rect width="64" height="64" fill="#7a5c3e"/><text x="32" y="42" font-size="26" text-anchor="middle" fill="#f7efe4" font-family="sans-serif">陈</text>
+              </svg>
+            </div>
+            <div><b>陈默 · 普通消费者</b><em>2026-11-09</em></div>
+          </div>
+          <p>我平时不太看这类内容，但白板那期我居然完整看完了，讲得很清楚。现在买牛奶会习惯性扫一下，看到检测报告心里踏实。</p>
+          <span class="trace-tag">消费者视角</span>
+        </article>
+
+        <article class="trace-comment">
+          <div class="trace-comment-head">
+            <div class="trace-avatar">
+              <svg viewBox="0 0 64 64" role="img" aria-label="用户周砚的圆形首字头像">
+                <rect width="64" height="64" fill="#40556b"/><text x="32" y="42" font-size="26" text-anchor="middle" fill="#eafaf4" font-family="sans-serif">周</text>
+              </svg>
+            </div>
+            <div><b>周砚 · 快消区域经理</b><em>2026-11-05</em></div>
+          </div>
+          <p>渠道治理那期信息量很大，尤其异常流向预警那一段。我们照着重排了采集节点，三个月经销商越界销售的情况下降了不少。建议多做这种带数据的复盘。</p>
+          <span class="trace-tag">渠道治理</span>
+        </article>
+
+        <article class="trace-comment">
+          <div class="trace-comment-head">
+            <div class="trace-avatar">
+              <svg viewBox="0 0 64 64" role="img" aria-label="用户阿岚的圆形首字头像">
+                <rect width="64" height="64" fill="#8a5a86"/><text x="32" y="42" font-size="26" text-anchor="middle" fill="#f7eaf6" font-family="sans-serif">岚</text>
+              </svg>
+            </div>
+            <div><b>阿岚 · 设计专业学生</b><em>2026-10-30</em></div>
+          </div>
+          <p>查询页设计对照那期对我毕业设计帮助很大，尤其是「结论前置」的思路。视频里的版式截图我反复看了好几遍，细节讲得很到位。</p>
+          <span class="trace-tag">体验设计</span>
+        </article>
+
+        <article class="trace-comment">
+          <div class="trace-comment-head">
+            <div class="trace-avatar">
+              <svg viewBox="0 0 64 64" role="img" aria-label="用户老韩的圆形首字头像">
+                <rect width="64" height="64" fill="#2f6f7a"/><text x="32" y="42" font-size="26" text-anchor="middle" fill="#eafaf4" font-family="sans-serif">韩</text>
+              </svg>
+            </div>
+            <div><b>老韩 · 仓库管理员</b><em>2026-10-26</em></div>
+          </div>
+          <p>手持终端扫码那集很接地气，没有一味讲高大上的系统。我们仓库信号差，采集掉的包确实头疼，视频里提到的离线补传方案我们正在试。</p>
+          <span class="trace-tag">仓储采集</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + 合作 -->
+  <section class="trace-sec" id="trace-updates" aria-labelledby="traceUpdatesTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceUpdatesTitle">企业动态 · 产品追溯一物一码官方发布</h2>
+          <p>平台近期上线内容、功能更新与合作进展，均以官方发布为准。</p>
+        </div>
+        <div class="trace-sec-side"><a class="trace-link" href="#trace-faq">查阅帮助中心</a></div>
+      </div>
+
+      <div class="trace-news">
+        <article class="trace-news-item">
+          <div class="trace-news-date">2026-11-21</div>
+          <h4>「一物一码全链路溯源」纪实专题上线</h4>
+          <p>10 位创作者实拍从工厂到货架的全流程，首批 14 集已发布，后续每周更新两集。</p>
+        </article>
+        <article class="trace-news-item">
+          <div class="trace-news-date">2026-11-15</div>
+          <h4>码库管理系统 v3.8 更新日志</h4>
+          <p>新增批次回滚预演、离线补传看板与异常流向日报，采集成功率统计口径同步调整。</p>
+        </article>
+        <article class="trace-news-item">
+          <div class="trace-news-date">2026-11-08</div>
+          <h4>溯光纪录短片扶持计划开启报名</h4>
+          <p>面向独立创作者征集溯源题材短片，入选作品将获得制作支持与平台首页展映机会。</p>
+        </article>
+        <article class="trace-news-item">
+          <div class="trace-news-date">2026-10-29</div>
+          <h4>与三家包装企业达成内容合作</h4>
+          <p>共同推出赋码现场系列实拍，覆盖瓶装、软包与纸盒三类常见包装形态。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="trace-sec" aria-label="投稿与分享">
+    <div class="trace-wrap">
+      <div class="trace-cta">
+        <div>
+          <h2>你有真实的溯源现场，我们有镜头与观众</h2>
+          <p>无论是产线上的一个细节，还是扫码体验中的一次改进，都值得被记录。提交选题或上传作品，加入产品追溯一物一码的内容社区，与更多同行交流。</p>
+        </div>
+        <div class="trace-cta-actions">
+          <button class="trace-btn trace-btn-mint" type="button" data-open-modal="submit">我要投稿</button>
+          <button class="trace-btn trace-btn-ghost" type="button" data-open-modal="share">分享本页</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 FAQ -->
+  <section class="trace-sec trace-sec-alt" id="trace-faq" aria-labelledby="traceFaqTitle">
+    <div class="trace-wrap">
+      <div class="trace-sec-head">
+        <div>
+          <h2 id="traceFaqTitle">帮助中心 · 关于产品追溯一物一码的常见问题</h2>
+          <p>内容合作、技术咨询与观看相关的疑问，先看看这里。</p>
+        </div>
+      </div>
+
+      <div class="trace-faq">
+        <details open>
+          <summary>平台上的溯源视频可以转载或商用吗？</summary>
+          <p>页面内视频均为平台与合作创作者原创，个人学习与非商业引用请注明出处；商业用途需通过联系入口提交申请，我们会协助对接创作者获取授权，确保正版使用。</p>
+        </details>
+        <details>
+          <summary>我是工厂负责人，想拍摄自己的产线，怎么申请？</summary>
+          <p>通过页面底部的联系入口或「我要投稿」提交基本信息，包括所在城市、产品类别与产线情况。我们会在三个工作日内回复，并评估选题适配度与拍摄可行性。</p>
+        </details>
+        <details>
+          <summary>一物一码的实施周期一般要多久？</summary>
+          <p>视品类与产线复杂度而定。单品类试点通常四到八周可跑通赋码与采集闭环；多品类、多工厂同步上线一般需要三到六个月，建议分阶段推进并预留数据核对时间。</p>
+        </details>
+        <details>
+          <summary>平台是否提供溯源方案咨询或系统对接服务？</summary>
+          <p>本平台聚焦内容与社区，可提供基于实际案例的参考建议与经验分享。具体系统落地建议联系具备资质的服务商，我们也会在专题内容中介绍不同规模的实施路径。</p>
+        </details>
+        <details>
+          <summary>扫码查不到信息，通常是什么原因？</summary>
+          <p>常见原因包括码面磨损导致识别错误、产品尚未完成出库采集、查询接口临时波动，以及该码已被归档。遇到异常可通过反馈入口提交码面照片，便于核查。</p>
+        </details>
+        <details>
+          <summary>如何成为平台的认证创作者？</summary>
+          <p>持续发布与溯源、包装、渠道或消费体验相关的原创内容，累计发布不少于五期且内容真实可核查，即可申请认证。认证创作者享有专题优先合作与首页推荐机会。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="trace-footer">
+  <div class="trace-wrap">
+    <div class="trace-foot-grid">
+      <div>
+        <div class="trace-foot-brand">
+          <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#16405a"/>
+            <rect x="14" y="14" width="9" height="9" fill="#41d6a8"/>
+            <rect x="27" y="14" width="9" height="9" fill="#e9f4f1"/>
+            <rect x="40" y="14" width="10" height="9" fill="#41d6a8"/>
+            <rect x="14" y="27" width="9" height="9" fill="#e9f4f1"/>
+            <rect x="27" y="27" width="9" height="9" fill="#41d6a8"/>
+            <rect x="14" y="40" width="10" height="9" fill="#41d6a8"/>
+            <rect x="40" y="40" width="10" height="9" fill="#e9f4f1"/>
+          </svg>
+          <strong>一物一码溯源</strong>
+        </div>
+        <p>产品追溯一物一码官方网站，专注溯源领域原创高清视频内容与企业溯源实践记录，持续运营，值得信赖。我们相信真实的力量，也相信每一件产品都应讲得清来路。</p>
+      </div>
+      <div>
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="#trace-focus">焦点内容</a></li>
+          <li><a href="#trace-topics">专题企划</a></li>
+          <li><a href="#trace-deep">深度解析</a></li>
+          <li><a href="#trace-rank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区与作者</h4>
+        <ul>
+          <li><a href="#trace-authors">创作者矩阵</a></li>
+          <li><a href="#trace-voices">用户口碑</a></li>
+          <li><a href="#trace-updates">企业动态</a></li>
+          <li><a href="#trace-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li><a href="#trace-top" data-open-modal="contact">商务与合作咨询</a></li>
+          <li><a href="#trace-top" data-open-modal="submit">投稿与报名入口</a></li>
+          <li><a href="#trace-top" data-open-modal="share">分享本页</a></li>
+          <li><a href="#trace-top" data-open-modal="contact">反馈与举报</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="trace-foot-bottom">
+      <span>© 2026 一物一码溯源 · 产品追溯一物一码官方网站 · 版权所有</span>
+      <span>信息备案：浙ICP备2026018842号-3 · 内容均为原创，转载需授权</span>
+    </div>
+  </div>
+</footer>
+
+<button class="trace-top" id="traceBackTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="trace-toast" id="traceToast" role="status" aria-live="polite"></div>
+
+<!-- 投稿弹窗 -->
+<div class="trace-modal" id="traceModalSubmit" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="traceSubmitTitle">
+  <div class="trace-modal-box">
+    <button class="trace-modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+    <h3 id="traceSubmitTitle">投稿与报名</h3>
+    <p class="trace-modal-sub">填写选题或作品信息，我们会在一周内回复。请确保内容为原创且可核查。</p>
+    <div class="trace-field-row"><label for="traceSubName">称呼</label><input id="traceSubName" type="text" placeholder="例如：李工"></div>
+    <div class="trace-field-row"><label for="traceSubTopic">选题或作品名称</label><input id="traceSubTopic" type="text" placeholder="例如：饮料厂赋码产线实录"></div>
+    <div class="trace-field-row"><label for="traceSubDesc">简要说明</label><textarea id="traceSubDesc" placeholder="拍摄地点、内容要点、预计时长…"></textarea></div>
+    <button class="trace-btn trace-btn-primary" type="button" id="traceSubmitBtn" style="width:100%;">提交</button>
+  </div>
+</div>
+
+<!-- 联系弹窗 -->
+<div class="trace-modal" id="traceModalContact" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="traceContactTitle">
+  <div class="trace-modal-box">
+    <button class="trace-modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+    <h3 id="traceContactTitle">联系与反馈</h3>
+    <p class="trace-modal-sub">商务合作、内容授权、问题反馈与举报，均可通过以下方式联系。</p>
+    <div class="trace-field-row"><label for="traceContactType">事项类型</label><input id="traceContactType" type="text" placeholder="例如：内容授权 / 举报"></div>
+    <div class="trace-field-row"><label for="traceContactMail">联系方式</label><input id="traceContactMail" type="text" placeholder="邮箱或手机号"></div>
+    <div class="trace-field-row"><label for="traceContactMsg">详细说明</label><textarea id="traceContactMsg" placeholder="请描述具体情况，便于我们跟进。"></textarea></div>
+    <button class="trace-btn trace-btn-primary" type="button" id="traceContactBtn" style="width:100%;">发送</button>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="trace-modal" id="traceModalShare" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="traceShareTitle">
+  <div class="trace-modal-box">
+    <button class="trace-modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+    <h3 id="traceShareTitle">分享本页</h3>
+    <p class="trace-modal-sub">把产品追溯一物一码的专题内容分享给同行与朋友。</p>
+    <div class="trace-share-row">
+      <button type="button" data-share="wechat">微信好友</button>
+      <button type="button" data-share="moments">朋友圈</button>
+      <button type="button" data-share="weibo">微博</button>
+      <button type="button" data-share="qq">QQ</button>
+    </div>
+    <div style="margin-top:14px;">
+      <button class="trace-btn trace-btn-ghost" type="button" data-copy style="width:100%;">复制页面链接</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('traceToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var navToggle = document.getElementById('traceNavToggle');
+  var mainNav = document.getElementById('traceMainNav');
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索前端反馈 */
+  var searchInput = document.getElementById('traceSearchInput');
+  var searchBtn = document.getElementById('traceSearchBtn');
+  var videoItems = Array.prototype.slice.call(document.querySelectorAll('#traceVideoList .trace-vlist-item'));
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      videoItems.forEach(function(it){ it.style.display = ''; });
+      showToast('输入关键词可筛选当前位置的视频条目');
+      return;
+    }
+    var hit = 0;
+    videoItems.forEach(function(it){
+      var text = it.textContent || '';
+      var match = text.indexOf(q) !== -1;
+      it.style.display = match ? '' : 'none';
+      if(match) hit++;
+    });
+    if(hit > 0){
+      showToast('已筛选出 ' + hit + ' 条与「' + q + '」相关的内容');
+    }else{
+      videoItems.forEach(function(it){ it.style.display = ''; });
+      showToast('暂未找到「' + q + '」相关条目，已展示全部内容');
+    }
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var like = e.target.closest('[data-like]');
+    if(like){
+      var pressed = like.getAttribute('aria-pressed') === 'true';
+      like.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+      like.classList.toggle('on', !pressed);
+      var txt = like.querySelector('span');
+      if(txt){ txt.textContent = pressed ? '点赞' : '已赞'; }
+      showToast(pressed ? '已取消点赞' : '感谢点赞，已记录你的支持');
+      return;
+    }
+    var col = e.target.closest('[data-collect]');
+    if(col){
+      var on = col.getAttribute('aria-pressed') === 'true';
+      col.setAttribute('aria-pressed', on ? 'false' : 'true');
+      col.classList.toggle('on', !on);
+      var t2 = col.querySelector('span');
+      if(t2){ t2.textContent = on ? '收藏' : '已收藏'; }
+      showToast(on ? '已取消收藏' : '已加入收藏，可在个人中心查看');
+      return;
+    }
+    var cp = e.target.closest('[data-copy]');
+    if(cp){
+      var link = window.location.origin + window.location.pathname + '#trace-top';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          showToast('链接已复制到剪贴板');
+        }).catch(function(){
+          showToast('复制失败，请手动选取地址栏链接');
+        });
+      }else{
+        showToast('当前环境不支持自动复制，请手动复制地址栏链接');
+      }
+      return;
+    }
+    var sh = e.target.closest('[data-share]');
+    if(sh){
+      var map = {wechat:'微信好友', moments:'朋友圈', weibo:'微博', qq:'QQ'};
+      var name = map[sh.getAttribute('data-share')] || '社交平台';
+      showToast('已唤起分享提示：可通过' + name + '转发本页');
+      return;
+    }
+    var opener = e.target.closest('[data-open-modal]');
+    if(opener){
+      e.preventDefault();
+      openModal('traceModal' + opener.getAttribute('data-open-modal').charAt(0).toUpperCase() + opener.getAttribute('data-open-modal').slice(1));
+      return;
+    }
+    var closer = e.target.closest('[data-close-modal]');
+    if(closer){
+      closeAllModals();
+    }
+  });
+
+  function openModal(id){
+    var m = document.getElementById(id);
+    if(!m) return;
+    m.classList.add('open');
+    m.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAllModals(){
+    document.querySelectorAll('.trace-modal.open').forEach(function(m){
+      m.classList.remove('open');
+      m.setAttribute('aria-hidden','true');
+    });
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.trace-modal').forEach(function(m){
+    m.addEventListener('click', function(e){
+      if(e.target === m) closeAllModals();
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeAllModals();
+  });
+
+  /* 表单提交反馈 */
+  function bindSubmit(btnId, inputs, tip){
+    var btn = document.getElementById(btnId);
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var filled = inputs.some(function(id){
+        var el = document.getElementById(id);
+        return el && el.value.trim().length > 0;
+      });
+      if(!filled){
+        showToast('请至少填写一项内容后再提交');
+        return;
+      }
+      inputs.forEach(function(id){
+        var el = document.getElementById(id);
+        if(el) el.value = '';
+      });
+      closeAllModals();
+      showToast(tip);
+    });
+  }
+  bindSubmit('traceSubmitBtn', ['traceSubName','traceSubTopic','traceSubDesc'], '投稿信息已提交，我们将在五个工作日内回复');
+  bindSubmit('traceContactBtn', ['traceContactType','traceContactMail','traceContactMsg'], '已收到你的反馈，我们会尽快跟进处理');
+
+  /* 回到顶部 */
+  var backTop = document.getElementById('traceBackTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 420){ backTop.classList.add('show'); }
+    else{ backTop.classList.remove('show'); }
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+  </html>
